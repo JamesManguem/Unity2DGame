@@ -9,6 +9,8 @@ public class FruitManager : MonoBehaviour
 
     public Text levelCleared;
 
+    public GameObject transition;
+
 
 
     private void Update()
@@ -23,6 +25,7 @@ public class FruitManager : MonoBehaviour
         {
             Debug.Log("No quedan Frutas, Victoria");
             levelCleared.gameObject.SetActive(true);
+            transition.SetActive(true);
             Invoke("ChangeScene", 1); 
         }
     }
