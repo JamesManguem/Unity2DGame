@@ -9,6 +9,10 @@ public class PlayerMove : MonoBehaviour
 
     public float jumSpeed = 3;
 
+    public float doubleJumpSpeed = 2.5f;
+
+    private bool canDoubleJump;
+
     Rigidbody2D rb2D;
 
     public bool betterJump = false;
@@ -26,7 +30,57 @@ public class PlayerMove : MonoBehaviour
         rb2D = GetComponent<Rigidbody2D>();
     }
 
-    
+    private void Update()
+    {
+        if (Input.GetKey("space")) 
+        {
+            if (CheckGround.isGrounded)
+            {
+                canDoubleJump = true;
+                rb2D.velocity = new Vector2(rb2D.velocity.x, jumSpeed);
+            }
+            else
+            {
+                if (Input.GetKeyDown("space"))
+                {
+                    if (canDoubleJump)
+                    {
+                        animator.SetBool("DoubleJump", true);
+                        rb2D.velocity = new Vector2(rb2D.velocity.x, doubleJumpSpeed);
+                        canDoubleJump = false;
+                    }
+                }
+            }
+
+        }
+       
+
+        if (CheckGround.isGrounded == false)
+        {
+            animator.SetBool("Jump", true);
+            animator.SetBool("Run", false);
+        }
+        if (CheckGround.isGrounded == true)
+        {
+            animator.SetBool("Jump", false);
+            animator.SetBool("DoubleJump", false);
+            animator.SetBool("Falling", false);
+        }
+
+        if (rb2D.velocity.y<0)
+        {
+            animator.SetBool("Falling", true);
+        }
+        else if(rb2D.velocity.y > 0)
+        {
+            animator.SetBool("Falling", false);
+        }
+
+
+
+    }
+
+
     void FixedUpdate()
     {
         if (Input.GetKey("d") || Input.GetKey("right"))
@@ -48,20 +102,7 @@ public class PlayerMove : MonoBehaviour
             rb2D.velocity = new Vector2(0, rb2D.velocity.y);
             animator.SetBool("Run", false);
         } 
-        if (Input.GetKey("space") && CheckGround.isGrounded)
-        {
-            rb2D.velocity = new Vector2(rb2D.velocity.x, jumSpeed);
-        }
-
-        if (CheckGround.isGrounded == false)
-        {
-            animator.SetBool("Jump", true);
-            animator.SetBool("Run", false);
-        }
-        if (CheckGround.isGrounded==true)
-        {
-            animator.SetBool("Jump", false);
-        }
+        
 
         if (betterJump)
         {

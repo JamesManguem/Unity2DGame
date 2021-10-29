@@ -9281,7 +9281,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   runSpeed: 2
   jumSpeed: 3
-  betterJump: 1
+  doubleJumpSpeed: 2.5
+  betterJump: 0
   fallMultiplayer: 0.5
   lowMultiplayer: 1
   spriteRenderer: {fileID: 1415339171}
