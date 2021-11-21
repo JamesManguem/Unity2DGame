@@ -53,14 +53,18 @@
     <UnityVersion>2020.3.20f1</UnityVersion>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\OpenDoor.cs" />
+    <Compile Include="Assets\Scripts\CheckPoint.cs" />
     <Compile Include="Assets\Scripts\PlayerMove.cs" />
     <Compile Include="Assets\Scripts\FruitCollected.cs" />
     <Compile Include="Assets\Scripts\CheckGround.cs" />
     <Compile Include="Assets\Scripts\SpikeEnemy.cs" />
     <Compile Include="Assets\Scripts\FruitManager.cs" />
+    <Compile Include="Assets\Scripts\Platform.cs" />
+    <Compile Include="Assets\Scripts\PlayerSelect.cs" />
     <Compile Include="Assets\Scripts\DamageObject.cs" />
-    <Compile Include="Assets\Scripts\CheckPoint.cs" />
     <Compile Include="Assets\Scripts\PlayerRespawn.cs" />
+    <Compile Include="Assets\Scripts\ChangeDoorSkins.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
