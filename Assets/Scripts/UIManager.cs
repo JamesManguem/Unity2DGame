@@ -2,9 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.Audio;
 
 public class UIManager : MonoBehaviour
 {
+    public AudioSource clip;
     public GameObject optionsPanel;
 
     public void OptionsPanel()
@@ -34,5 +36,10 @@ public class UIManager : MonoBehaviour
     public void QuitGame()
     {
         Application.Quit();
+    }
+
+    public void PlaySoundButton()
+    {
+        clip.Play();
     }
 }

@@ -72,8 +72,10 @@
     <Compile Include="Assets\Joystick Pack\Examples\JoystickPlayerExample.cs" />
     <Compile Include="Assets\Scripts\PlayerSelect.cs" />
     <Compile Include="Assets\Scripts\DamageObject.cs" />
-    <Compile Include="Assets\Scripts\PlayerRespawn.cs" />
     <Compile Include="Assets\Scripts\UIManager.cs" />
+    <Compile Include="Assets\Scripts\Enemies\AIBasic.cs" />
+    <Compile Include="Assets\Scripts\PlayerRespawn.cs" />
+    <Compile Include="Assets\Scripts\Enemies\JumpDamage.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
