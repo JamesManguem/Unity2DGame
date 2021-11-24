@@ -64,6 +64,7 @@
     <Compile Include="Assets\Scripts\FruitCollected.cs" />
     <Compile Include="Assets\Joystick Pack\Examples\JoystickSetterExample.cs" />
     <Compile Include="Assets\Scripts\CheckGround.cs" />
+    <Compile Include="Assets\Scripts\Enemies\JumpDamage.cs" />
     <Compile Include="Assets\Scripts\SpikeEnemy.cs" />
     <Compile Include="Assets\Scripts\ChangeDoorSkins.cs" />
     <Compile Include="Assets\Joystick Pack\Scripts\Joysticks\FloatingJoystick.cs" />
@@ -75,7 +76,8 @@
     <Compile Include="Assets\Scripts\UIManager.cs" />
     <Compile Include="Assets\Scripts\Enemies\AIBasic.cs" />
     <Compile Include="Assets\Scripts\PlayerRespawn.cs" />
-    <Compile Include="Assets\Scripts\Enemies\JumpDamage.cs" />
+    <Compile Include="Assets\Scripts\Enemies\Plant\PlantEnemy.cs" />
+    <Compile Include="Assets\Scripts\Enemies\Plant\BulletPlant.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
